@@ -12,13 +12,38 @@
         <p id="subtitle">version 1.2 <span class="update">The Cool Update 😎</span></p>
         <br>
       </div>
+
       <hr>
+
       <br>
-      <p>monke ahead!</p>
+      <p id="warning">if you see this, ALLOW JS LOSER!</p>
+      <p>(reload page for epic messages)</p>
       <br>
-      <img src="img/gorilla.gif" alt="monke funni">
-      <img src="img/drippymonke.jpg" alt="drippy monke">
-      <img src="img/monk.png" alt="real monke">
+
+      <script>
+        const possibleEmojis = [
+          "🚨",
+          "⚠️",
+          "🐱"
+        ]
+
+        const allWarnings = [
+          " WARNING MONKE AHEAD ",
+          " here be monke ",
+          " dirt STINKS "
+        ];
+
+        var warningElement = document.getElementById("warning");
+        var warningEmoji = possibleEmojis[Math.floor(Math.random() * possibleEmojis.length)]; // Let's get the emoji for the warning
+
+        warningElement.innerHTML = warningEmoji + allWarnings[Math.floor(Math.random() * allWarnings.length)] + warningEmoji; // Warning text, with emojis
+      </script>
+
+      <div class="gallery">
+        <img src="img/gorilla.gif" alt="monke funni">
+        <img src="img/drippymonke.jpg" alt="drippy monke">
+        <img src="img/monk.png" alt="real monke">
+      </div>
     </div>
   </body>
 </html>
